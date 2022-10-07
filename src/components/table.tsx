@@ -30,6 +30,30 @@ export default function Demo() {
           <th>Manufacture</th>
           <th>{text.cpu[0].cpu_manufacturer}</th>
         </tr>
+        <tr>
+          <th>Architeture</th>
+          <th>{text.cpu[0].cpu_architeture}</th>
+        </tr>
+        <tr>
+          <th>Cores</th>
+          <th>{text.cpu[0].cpu_cores}</th>
+        </tr>
+        <tr>
+          <th>Threads</th>
+          <th>{text.cpu[0].cpu_threads}</th>
+        </tr>
+        <tr>
+          <th>Base Clock</th>
+          <th>{text.cpu[0].cpu_clock}</th>
+        </tr>
+        <tr>
+          <th>Boost clock</th>
+          <th>{text.cpu[0].cpu_turbo}</th>
+        </tr>
+        <tr>
+          <th>tdp</th>
+          <th>{text.cpu[0].cpu_tdp}</th>
+        </tr>
         </thead>
     </Table>
   );

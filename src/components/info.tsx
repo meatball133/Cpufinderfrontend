@@ -8,8 +8,8 @@ import {
     useRecoilState,
     useRecoilValue,
   } from 'recoil';
-
-async function Api(setText:any, text:any) {
+import { useState } from 'react';
+async function Api(setText:any, text:any, input:string) {
   
     console.log("hi")
        try {
@@ -18,7 +18,7 @@ async function Api(setText:any, text:any) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({"cpu_name": "12700k"}),
+            body: JSON.stringify({"cpu_name": input}),
         });
         const json = await response.json();
         console.log(json);
@@ -32,14 +32,18 @@ async function Api(setText:any, text:any) {
 export default function InputWithButton(props: TextInputProps) {
   const theme = useMantineTheme();
   const [text, setText] = useRecoilState(Cpu_state);
+  const [input, setInput] = useState("");
+  let value:string = ""
   return (
     <>
     <TextInput
       icon={<IconSearch size={18} stroke={1.5} />}
       radius="xl"
       size="md"
+      onChange={(event) => setInput(event.currentTarget.value)}
+      value={input}
       rightSection={
-        <ActionIcon size={32} radius="xl" color={theme.primaryColor} variant="filled" onClick={() => Api(setText, text)}>
+        <ActionIcon size={32} radius="xl" color={theme.primaryColor} variant="filled" onClick={() => Api(setText, text,input)}>
           {theme.dir === 'ltr' ? (
             <IconArrowRight size={18} stroke={1.5} />
           ) : (
