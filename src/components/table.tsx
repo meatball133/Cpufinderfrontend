@@ -20,7 +20,7 @@ export default function Demo() {
     const text = useRecoilValue(Cpu_state);
   console.log(text)
   return (
-    <Table highlightOnHover withColumnBorders withBorder >
+    <Table highlightOnHover withColumnBorders withBorder sx={{ tableLayout: 'fixed' }}>
       <thead>
         <tr>
           <th><Image src="https://cdn.discordapp.com/attachments/988408163340525578/1026873174069092442/ntiloga_01_Rityta_1_3.png" alt="Nti" height={100} width={100}/></th>

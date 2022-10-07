@@ -8,7 +8,7 @@ import { Grid } from '@mantine/core';
 import InputWithButton from './info';
 import Demo from "./table";
 
-  function RoutesApp() {
+ function RoutesApp() {
     return (
       <Routes>
     <Route path="/" element={
