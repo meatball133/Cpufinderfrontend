@@ -14,7 +14,7 @@ import {
 import HeaderResponsive from './components/header';
 const Cpu_state = atom({
   key: 'Cpu_state', // unique ID (with respect to other atoms/selectors)
-  default: {cpu:[{cpu_name: "N/A", cpu_manufacturer: "N/A", cpu_architeture:"N/A", cpu_cores: 0, cpu_threads:0,cpu_clock:0.0, cpu_turbo:0.0, cpu_tdp:0}]}, // default value (aka initial value)
+  default: {cpu:[{cpu_name: "N/A", cpu_manufacturer: "N/A", cpu_architecture:"N/A", cpu_cores: 0, cpu_threads:0,cpu_clock:0.0, cpu_turbo:0.0, cpu_tdp:0}]}, // default value (aka initial value)
 });
 function App() {
   return (
