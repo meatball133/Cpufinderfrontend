@@ -32,7 +32,7 @@ export default function Demo() {
         </tr>
         <tr>
           <th>Architeture</th>
-          <th>{text.cpu[0].cpu_architeture}</th>
+          <th>{text.cpu[0].cpu_architecture}</th>
         </tr>
         <tr>
           <th>Cores</th>
